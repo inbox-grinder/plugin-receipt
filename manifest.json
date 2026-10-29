@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1",
+  "id": "com.inboxgrinder.examples.receipt",
+  "name": "Receipts",
+  "description": "Extracts labelled receipts and order confirmations into persistent records with source evidence.",
+  "version": "0.1.0",
+  "runtime": "wasm-component",
+  "entrypoint": "receipt.wasm",
+  "publisher": {
+    "name": "Inbox Grinder",
+    "repository": "https://github.com/inbox-grinder/plugin-receipt"
+  },
+  "compatibility": {
+    "inboxGrinderApi": "0.1"
+  },
+  "permissions": [
+    "read_metadata",
+    "read_text_body",
+    "read_html_body"
+  ],
+  "matches": {
+    "subjectContains": [
+      "receipt",
+      "order confirmation",
+      "order confirmed"
+    ]
+  },
+  "contentNeeds": {
+    "metadata": true,
+    "headers": [],
+    "textBody": true,
+    "htmlBody": true,
+    "links": false,
+    "attachments": "none"
+  },
+  "templates": [
+    {
+      "id": "receipt",
+      "kind": "declarative",
+      "path": "template.json"
+    }
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "recordContract": {
+    "version": 1,
+    "identityVersion": 1,
+    "updateKeyVersion": 1,
+    "capabilities": [
+      {
+        "name": "records",
+        "version": 1,
+        "required": true
+      }
+    ],
+    "services": [],
+    "templates": [
+      {
+        "family": "receipt",
+        "version": 1
+      }
+    ]
+  },
+  "catalogue": {
+    "categories": [
+      "finance"
+    ]
+  }
+}

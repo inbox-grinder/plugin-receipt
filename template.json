@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1",
+  "id": "receipt",
+  "kind": "declarative",
+  "recordFamily": "receipt",
+  "familyVersion": 1,
+  "surfaces": [
+    "row",
+    "card",
+    "detail"
+  ],
+  "layout": [
+    {
+      "type": "title",
+      "text": "Receipt"
+    }
+  ]
+}

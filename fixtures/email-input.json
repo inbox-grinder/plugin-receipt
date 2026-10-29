@@ -1,0 +1,46 @@
+{
+  "message": {
+    "accountId": "account-personal",
+    "mailboxName": "INBOX",
+    "uid": 7788,
+    "messageId": "<verification-code-1@example>",
+    "size": 2048,
+    "sourceId": "source-1"
+  },
+  "sender": {
+    "name": "Paper Shop",
+    "address": "orders@paper.example",
+    "domain": "paper.example"
+  },
+  "recipients": {
+    "to": [
+      {
+        "name": "User",
+        "address": "user@example.com",
+        "domain": "example.com"
+      }
+    ],
+    "cc": [],
+    "bcc": []
+  },
+  "subject": "Order confirmation A-42",
+  "date": "2026-10-25T12:00:00Z",
+  "headers": {},
+  "textBody": "Merchant: Paper Shop\nOrder number: A-42\nOrder date: 2026-10-25\nItem: 2 \u00d7 Notebook @ USD 21.00\nTotal: USD 42.00",
+  "htmlBody": null,
+  "links": [],
+  "attachments": [],
+  "invocation": {
+    "schemaVersion": "1",
+    "config": {},
+    "sources": [
+      {
+        "id": "source-1",
+        "kind": "email"
+      }
+    ],
+    "capabilities": [
+      "records"
+    ]
+  }
+}
